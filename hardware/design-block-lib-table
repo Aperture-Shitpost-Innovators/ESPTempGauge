@@ -1,0 +1,4 @@
+(design_block_lib_table
+	(version 7)
+	(lib (name "espressif.3dshapes") (type "KiCad") (uri "${KIPRJMOD}/esp32/3dmodels/espressif.3dshapes") (options "") (descr ""))
+)
