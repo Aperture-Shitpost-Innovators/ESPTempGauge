@@ -67,7 +67,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -81,7 +80,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<p align="center"><img src="images/irl.jpg" alt="Logo" width="320" height="240"> </p>
 
 This is a customizable oil temperature gauge software repository. As of now, it only features the software side, however I plan on releasing the schematic and PCB files. The default style was designed after the 9'th generation Honda Civic gauge cluster. This source code was designed to be compilable and uploadable onto an ESP32-WROOM32-out of the box using Visual Studio Code and PlatformIO.
 
@@ -113,6 +112,7 @@ This is an example of how to list things you need to use the software and how to
 * [PlatformIO extension](https://platformio.org/install/ide?install=vscode)
 
 ### Installation
+#### USB upload
 
 1. Install prerequisites
 2. Clone the repo
@@ -123,15 +123,26 @@ This is an example of how to list things you need to use the software and how to
 4. Connect your ESP32 board and wire in the screen and sensors
 5. Click "Upload"
 
+#### OTA Updates (Firmware needs to be flashed once before and OTA updates enabled!)
+
+1. Make your changes and build the project
+2. Navigate into `.pio/build` and find the `firmware.bin` file.
+3. Make a hotspot matching your set WiFi name and password
+4. Start the ESP32. If it connects successfully, it should show `UPDATE MODE` on the screen.
+5. Connect to the WiFi using your laptop and navigate to [http://esp32.local](http://esp32.local).
+6. Select your new `firmware.bin` file and click "Upload"
+7. Once it finishes and you see the gauge restart, stop your hotspot and power cycle it.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Usable oil gauge
+- [ ] Refactored code
+    - [ ] Easy to read code
+    - [ ] Split into separate files
+- [ ] Easily customizable user interface
 
 See the [open issues](https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge/issues) for a full list of proposed features (and known issues).
 
@@ -203,7 +214,7 @@ Project Link: [https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge](htt
 [issues-shield]: https://img.shields.io/github/issues/Aperture-Shitpost-Innovators/ESPTempGauge.svg?style=for-the-badge
 [issues-url]: https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge/issues
 [license-shield]: https://img.shields.io/github/license/Aperture-Shitpost-Innovators/ESPTempGauge.svg?style=for-the-badge
-[license-url]: https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge/blob/master/LICENSE.txt
+[license-url]: https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/irl.png
