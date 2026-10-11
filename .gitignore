@@ -1,0 +1,10 @@
+.pio
+.cachez
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+*.bak
+
+!.pio/libdeps/esp32doit-devkit-v1/TFT_eSPI/User_Setups/User_Setup_Custom.h
+!.pio/libdeps/esp32doit-devkit-v1/TFT_eSPI/User_Setup_Select.h
