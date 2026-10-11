@@ -114,23 +114,24 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 #### USB upload
 
-1. Install prerequisites
+1. Install prerequisites.
 2. Clone the repo
    ```sh
    git clone https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge.git
    ```
-3. Do measurments of your sensor and input the Steinhart-Hart coefficents into the config variables.
-4. Connect your ESP32 board and wire in the screen and sensors
-5. Click "Upload"
+3. Do measurements of your sensor and input the Steinhart-Hart coefficients into the config variables.
+4. (OPTIONAL) Configure the OTA wifi name and password.
+5. Connect your ESP32 board and wire in the screen and sensors.
+6. In Visual Studio Code's PlatformIO tab, click "Upload".
 
 #### OTA Updates (Firmware needs to be flashed once before and OTA updates enabled!)
 
-1. Make your changes and build the project
+1. Make your changes and build the project.
 2. Navigate into `.pio/build` and find the `firmware.bin` file.
-3. Make a hotspot matching your set WiFi name and password
+3. Make a hotspot matching the WiFi name and password that were set in `include/wifi_passes.h`.
 4. Start the ESP32. If it connects successfully, it should show `UPDATE MODE` on the screen.
-5. Connect to the WiFi using your laptop and navigate to [http://esp32.local](http://esp32.local).
-6. Select your new `firmware.bin` file and click "Upload"
+5. Connect to the WiFi using your laptop and navigate to the ESP32's web page. By default, it is [http://esp32.local](http://esp32.local).
+6. Select your new `firmware.bin` file and click "Upload".
 7. Once it finishes and you see the gauge restart, stop your hotspot and power cycle it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
