@@ -80,7 +80,7 @@
 
 <p align="center"><img src="images/irl.jpg" alt="Logo" width="320" height="240"> </p>
 
-This is a customizable oil temperature gauge software repository. As of now, it only features the software side, however I plan on releasing the schematic and PCB files. The default style was designed after the 9'th generation Honda Civic gauge cluster. This source code was designed to be compilable and uploadable onto an ESP32-WROOM32 out of the box using Visual Studio Code and PlatformIO.
+This is a customizable oil temperature gauge software repository. The default style was designed after the 9'th generation Honda Civic gauge cluster. This source code was designed to be compilable and uploadable onto an ESP32-WROOM32 out of the box using Visual Studio Code and PlatformIO.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
