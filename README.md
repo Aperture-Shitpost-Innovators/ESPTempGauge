@@ -99,8 +99,26 @@ This is a customizable oil temperature gauge software repository. As of now, it 
 
 <!-- GETTING STARTED -->
 ## Getting Started
+Here are instructions on how to get the project up and running locally
 
-Here are instructions on how to get the program up and running locally
+
+### Hardware
+#### Parts list:
+* ESP32-WROOM-32E
+* GC9A01A based 1.28" round display
+* NTC Oil temperature of your choice
+* USB - UART programmer, prefferably an FTDI FT232RL based one
+* Custom ordered or manufactured PCB.
+* Miscellanious parts listed below.
+
+NOTE: PSRAM models of the ESP32 are preffered, lower memory models also work, however they cant fit the full screen into memory and thus it will show a 
+black bar on the bottom of the screen. It's not visible in normal mode, but will show up during an alarm.
+This is a hardware limitation.
+
+#### Assembly
+You will need to either manufacture or order a custom PCB for this project, either will work. I have provided a kicad project in the `hardware` folder if you wish to order one or modify my design.
+
+### Software
 
 ### Prerequisites
 
@@ -195,6 +213,7 @@ Project Link: [https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge](htt
 
 * [TFT_eSPI library](https://github.com/Bodmer/TFT_espi)
 * [PNGdec library](https://github.com/bitbank2/PNGdec)
+* [Simple Kalman Filter](https://github.com/denyssene/SimpleKalmanFilter)
 * [This really cool README template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
