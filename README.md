@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="160" height="160">
   </a>
 
 <h3 align="center">Aperture Shitpost Laboratories Highly Modular Engine Lubrication Liquid Thermal Reading Apparatus</h3>
