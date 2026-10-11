@@ -48,6 +48,7 @@
   #include <Update.h>
   #include "esp_wifi.h"
   #include "WebPages.h"
+  #include "wifi_passes.h"
 #endif
 
 #include <Arduino.h>            //Needed for PlatformIO
@@ -171,14 +172,6 @@ const uint8_t nightScreenBrightness = 20;
   //Logo PNG image position
   int16_t xpos = 0;
   int16_t ypos = 0;
-#endif
-
-#ifdef OTAUpdates
-  const char* host = "esp32";
-  const char* ssid = "OilGaugeUpdate";
-  const char* password = "1234567890abcdef1234567890";
-
-  bool isConnectedToWifi = false;
 #endif
 
 //millis() val on last screen refresh
@@ -547,10 +540,12 @@ void setup() {
 }
 
 void loop() {
-  if (isConnectedToWifi) {
-    tft.drawString("UPDATE MODE", 48, 32);
-  }
-  else{
+  #ifdef OTAUpdates
+    if (isConnectedToWifi) {
+      tft.drawString("UPDATE MODE", 48, 32);
+    }
+    else{
+  #endif
 
     //---- Sampling ----
     double sample = sampleOilTemp();    //NAN if this sample isn't usable
@@ -666,7 +661,10 @@ void loop() {
     if (textDue || needleMoved || faultChanged) {
       drawGauge(needlePos, shownTemp, alarmActive, shownFault);
     }
+  
+  #ifdef OTAUpdates
   }
+  #endif
 
   //Save on CPU power 
   delay(10);
