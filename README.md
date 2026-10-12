@@ -33,7 +33,7 @@
     <img src="images/logo.png" alt="Logo" width="160" height="160">
   </a>
 
-<h3 align="center">Aperture Shitpost Laboratories Highly Modular Engine Lubrication Liquid Thermal Reading Apparatus</h3>
+<h3 align="center">Aperture Shitpost Innovators Highly Modular Engine Lubrication Liquid Thermal Reading Apparatus</h3>
 
   <p align="center">
     ESP32-WROOM32 based oil temperature gauge with noise filtering, smooth movement and OTA updates.
