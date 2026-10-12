@@ -159,6 +159,7 @@ This is an example of how to list things you need to use the software and how to
 ## Roadmap
 
 - [x] Usable oil gauge
+- [ ] Proper documentation and instructions
 - [ ] Refactored code
     - [ ] Easy to read code
     - [ ] Split into separate files
