@@ -110,9 +110,9 @@ const uint8_t nightScreenBrightness = 20;
   //4.05k @ 100C
   //2.655 @ 120C
   // This may differ on your sensor, do your own measurments!
-  #define SH_A  -1.762956315e-3
-  #define SH_B  6.494655652e-4
-  #define SH_C  -16.60934013e-7
+  #define SH_A  -7.05182e-4
+  #define SH_B  4.61978e-4
+  #define SH_C  -8.04383e-7
 #else
   const float R_NOMINAL = 50571.92;   // Delphi sensor resistance at 25C (approx)
   const float T_NOMINAL = 25.0;      // Reference temperature in Celsius
