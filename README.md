@@ -1,23 +1,5 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -46,12 +28,6 @@
   </p>
 </div>
 
-# !!! THIS PAGE IS STILL UNDER CONSTRUCTION !!!
-## Code itself works fine, but assembly instructions are incomplete!
-
-
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -65,8 +41,17 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Hardware">Hardware</a></li>
+        <ul>
+          <li><a href="#Parts list">Parts list</a></li>
+          <li><a href="#Harness">Harness</a></li>
+          <li><a href="#Adapter">Adapter</a></li>
+        </ul>
+        <li><a href="#Software">Software</a></li>
+        <ul>
+          <li><a href="#prerequisites">Prerequisites</a></li>
+          <li><a href="#installation">Installation</a></li>
+        </ul>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -107,20 +92,34 @@ Here are instructions on how to get the project up and running locally
 
 
 ### Hardware
-#### Parts list:
+#### Parts list
 * ESP32-WROOM-32E
-* GC9A01A based 1.28" round display
+* GC9A01A based 1.28" round display (Prefferably the slim waveshare version, the others have a big PCB and will not fit for the Civic's dash)
 * NTC Oil temperature of your choice
 * USB - UART programmer, prefferably an FTDI FT232RL based one
 * Custom ordered or manufactured PCB.
 * Miscellanious parts listed below.
 
-NOTE: PSRAM models of the ESP32 are preffered, lower memory models also work, however they cant fit the full screen into memory and thus it will show a 
-black bar on the bottom of the screen. It's not visible in normal mode, but will show up during an alarm.
+NOTE: The non-PSRAM models cant fit the full screen into memory and thus to maintain compatibility, it will show a black bar on the bottom of the screen. It's not visible in normal mode, but will show up during an alarm.
 This is a hardware limitation.
 
-#### Assembly
 You will need to either manufacture or order a custom PCB for this project, either will work. I have provided a kicad project in the `hardware` folder if you wish to order one or modify my design.
+
+#### Harness
+Wire together a harness according to the provided schematic. Please keep the power and NTC wires above 0.75mm2 to prevent excessive voltage drops.
+<img width="1055" height="832" alt="Wiring schematic" src="https://github.com/user-attachments/assets/b6a02065-ff09-43cd-8b3f-d6f1396b69a5" />
+
+#### Adapter
+
+For this project, I used an oil filter sandwich plate with 1/8 NPT sensor ports. For the purposes of fitting it into an R18 block, I had to modify mine to fit, so I blocked off it's 2 ports leaving one free, grinded down the aluminium block and torqued down the sensor. To avoid leaks, I used a medium strength oil resistant thread-locker on all NPT threads. While it should seal well about 2h after installing the thread-locker, you should allow 24h to ensure a full cure. 
+
+- **Do not apply threadlocker to the oil filter thread.**
+- **Make sure to install the sandwich plate in the correct orientation to avoid serious oil leaks and possible engine damage**
+- **Inspect the sandwich plate after installation to ensure no leaks**
+
+ Modified plate            |  Fitted plate
+:-------------------------:|:-------------------------:
+<img width="226" height="403" alt="gauge2" src="https://github.com/user-attachments/assets/3b02efb0-ba3f-48f5-ae63-3e404104e0fc" /> | <img width="403" height="226" alt="gauge3" src="https://github.com/user-attachments/assets/01acce6d-f92d-417f-9b34-4981dfdad802" />
 
 ### Software
 
@@ -139,7 +138,7 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/Aperture-Shitpost-Innovators/ESPTempGauge.git
    ```
 3. Do measurements of your sensor and input the Steinhart-Hart coefficients into the config variables.
-4. (OPTIONAL) Configure the OTA wifi name and password.
+4. Configure the OTA wifi name and password.
 5. Connect your ESP32 board and wire in the screen and sensors.
 6. In Visual Studio Code's PlatformIO tab, click "Upload".
 
