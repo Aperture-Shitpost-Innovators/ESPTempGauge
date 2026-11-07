@@ -43,7 +43,7 @@
       <ul>
         <li><a href="#Hardware">Hardware</a></li>
         <ul>
-          <li><a href="#Parts list">Parts list</a></li>
+          <li><a href="#parts-list">Parts list</a></li>
           <li><a href="#Harness">Harness</a></li>
           <li><a href="#Adapter">Adapter</a></li>
         </ul>
