@@ -107,7 +107,8 @@ You will need to either manufacture or order a custom PCB for this project, eith
 
 #### Harness
 Wire together a harness according to the provided schematic. Please keep the power and NTC wires above 0.75mm2 to prevent excessive voltage drops.
-<img width="1055" height="832" alt="Wiring schematic" src="https://github.com/user-attachments/assets/b6a02065-ff09-43cd-8b3f-d6f1396b69a5" />
+
+<img width="700" height="500" alt="Wiring schematic" src="https://github.com/user-attachments/assets/b6a02065-ff09-43cd-8b3f-d6f1396b69a5" />
 
 #### Adapter
 
